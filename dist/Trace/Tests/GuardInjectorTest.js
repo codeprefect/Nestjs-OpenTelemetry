@@ -30,7 +30,7 @@ describe('Tracing Guard Injector Test', () => {
     });
     it(`should trace guarded controller`, async () => {
         class VeyselEfendi {
-            canActivate(context) {
+            canActivate() {
                 return true;
             }
         }
@@ -59,7 +59,7 @@ describe('Tracing Guard Injector Test', () => {
     });
     it(`should trace guarded controller method`, async () => {
         class VeyselEfendi {
-            canActivate(context) {
+            canActivate() {
                 return true;
             }
         }
@@ -90,7 +90,7 @@ describe('Tracing Guard Injector Test', () => {
     });
     it(`should trace guarded and decorated controller method`, async () => {
         class VeyselEfendi {
-            canActivate(context) {
+            canActivate() {
                 return true;
             }
         }
@@ -122,7 +122,7 @@ describe('Tracing Guard Injector Test', () => {
     });
     it(`should trace global guard`, async () => {
         class VeyselEfendi {
-            canActivate(context) {
+            canActivate() {
                 return true;
             }
         }

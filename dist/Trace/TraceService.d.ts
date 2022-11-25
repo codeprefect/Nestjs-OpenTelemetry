@@ -1,6 +1,6 @@
 import { Span } from '@opentelemetry/api';
 export declare class TraceService {
-    getTracer(): import("@opentelemetry/api").Tracer;
+    getTracer(): any;
     getSpan(): Span;
     startSpan(name: string): Span;
 }

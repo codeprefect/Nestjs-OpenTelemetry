@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NoopTraceExporter = void 0;
 class NoopTraceExporter {
-    export(spans, resultCallback) {
+    export() {
     }
     shutdown() {
         return Promise.resolve(undefined);

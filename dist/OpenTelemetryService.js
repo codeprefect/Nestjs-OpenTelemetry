@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.OpenTelemetryService = void 0;
 const common_1 = require("@nestjs/common");
@@ -21,14 +22,14 @@ let OpenTelemetryService = class OpenTelemetryService {
     constructor(sdk) {
         this.sdk = sdk;
     }
-    async beforeApplicationShutdown(signal) {
+    async beforeApplicationShutdown() {
         await this.sdk?.shutdown();
     }
 };
 OpenTelemetryService = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, common_1.Inject)(Constants_1.Constants.SDK)),
-    __metadata("design:paramtypes", [sdk_node_1.NodeSDK])
+    __metadata("design:paramtypes", [typeof (_a = typeof sdk_node_1.NodeSDK !== "undefined" && sdk_node_1.NodeSDK) === "function" ? _a : Object])
 ], OpenTelemetryService);
 exports.OpenTelemetryService = OpenTelemetryService;
 //# sourceMappingURL=OpenTelemetryService.js.map
